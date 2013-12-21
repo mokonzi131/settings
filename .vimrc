@@ -1,14 +1,7 @@
-
-" An example for a vimrc file.
+" Custom vimrc file
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2011 Apr 15
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+" Author:  Michael Landes
+" References: Built in vimrc by Bram Moolenaar
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -98,3 +91,14 @@ endif
 
 " Showing line numbers
 set number
+
+" Use spaces instead of tabs
+set expandtab
+" Length of tab is 4 spaces instead of default 8
+set tabstop=4
+set softtabstop=4
+" Control automatic indentation width as well
+set shiftwidth=4
+" Don't want these rules to apply to makefiles
+autocmd FileType make setlocal noexpandtab
+
